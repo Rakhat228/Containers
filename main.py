@@ -1,6 +1,8 @@
 import pandas as pd
-import numpy as np
 import streamlit as st
+from bs4 import BeautifulSoup as bs
+import requests
+from io import BytesIO
 lst = []
 prev_num = 1001581234
 login = 'Kalykova'
