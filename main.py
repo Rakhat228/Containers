@@ -28,7 +28,7 @@ if log_title == login and log_pass == password:
        return processed_data
     df_xlsx = to_excel(df)
     st.download_button(label='📥 Скачать готовый файл',
-                                   data = df ,
+                                   data = df_xlsx ,
                                    file_name= 'Output.xlsx')
         
 
