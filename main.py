@@ -25,8 +25,8 @@ if log_title == login and log_pass == password:
             writer.save()
             processed_data = output.getvalue()
             return processed_data
-        df_xlsx = to_excel(df)
-        st.download_button(label='📥 Press to download',
+    df_xlsx = to_excel(df)
+    st.download_button(label='📥 Press to download',
                                         data = df ,
                                         file_name = 'Containers.xlsx')
         
