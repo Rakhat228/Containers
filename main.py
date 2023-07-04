@@ -16,6 +16,17 @@ if log_title == login and log_pass == password:
     df = pd.DataFrame()
     df['Code'] = lst
     st.write(df)
-
+    def to_excel(df):
+        output = BytesIO()
+        writer = pd.ExcelWriter(output, engine='openpyxl')
+        result.to_excel(writer, index=False, sheet_name='Sheet1') 
+        writer.save()
+        processed_data = output.getvalue()
+        return processed_data
+    df_xlsx = to_excel(df)
+    st.download_button(label='📥 Скачать готовый файл',
+                                    data = df_xlsx ,
+                                    file_name=  'containers.xlsx')
+    to_excel(df)
 
 
