@@ -9,9 +9,9 @@ login = 'Kalykova'
 password = '12345678'
 log_title = st.text_input('Login')
 log_pass = st.text_input('password') 
-
+options = {'Mocha':'mocha', 'Kal':'Kal', 'Soskob':'soskob'}
 if log_title == login and log_pass == password:
-    st.multiselect(label, options)
+    st.multiselect('Выбрать контейнер', options)
     number = st.number_input('number', min_value=0, step=1)
     st.write(number)
     for i in range(1, number+1):
