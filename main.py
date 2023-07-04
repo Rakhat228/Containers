@@ -18,8 +18,9 @@ def load_data(sheets_url):
 
 
 # ok let's load the data
-questions_df = load_data(st.secrets["public_gsheets_url"])
-st.write(questions_df)
+#questions_df = load_data(st.secrets["public_gsheets_url"])
+#st.write(questions_df)
+
 if log_title == login and log_pass == password:
     st.selectbox('Выбрать контейнер', options)
     number = st.number_input('number', min_value=0, step=1)
