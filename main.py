@@ -23,7 +23,7 @@ if log_title == login and log_pass == password:
        output = BytesIO()
        writer = pd.ExcelWriter(output, engine='openpyxl')
        df.to_excel(writer, index=False, sheet_name='Sheet1') 
-       writer.save()
+       writer.close()
        processed_data = output.getvalue()
        return processed_data
     df_xlsx = to_excel(df)
