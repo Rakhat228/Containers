@@ -5,6 +5,14 @@ import streamlit as st
 login = 'a'
 password = '12345678'
 
+@st.cache_data(ttl=600)
+def load_data(sheets_url):
+    csv_url = sheets_url.replace("/edit#gid=", "/export?format=csv&gid=")
+    return pd.read_csv(csv_url)
+
+df = load_data(st.secrets["public_gsheets_url"])
+st.write(df)
+
 log_title = st.text_input('Login')
 log_pass = st.text_input('password')   
 
