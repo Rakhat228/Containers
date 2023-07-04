@@ -11,7 +11,7 @@ log_pass = st.text_input('password')
 if log_title == login and log_pass == password:
     number = st.number_input('number', min_value=0, step=1)
     st.write(number)
-    for i in range(1, number):
+    for i in range(1, number+1):
         df.append(prev_num + i)
     st.write(df)
 
