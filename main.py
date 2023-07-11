@@ -22,9 +22,7 @@ for i in range(len(xd['Login'])):
     if log_title == xd['Login'][i] and log_pass == xd['Password'][i]:
         token = xd['Token'][i]
         st.write(token)
-    else:
-        st.write('Неправильный логин или пароль')
-        '''st.selectbox('Выбрать контейнер', options)
+        st.selectbox('Выбрать контейнер', options)
         number = st.number_input('number', min_value=0, step=1)
         st.write(number)
         for i in range(1, number+1):
@@ -43,7 +41,10 @@ for i in range(len(xd['Login'])):
         df_xlsx = to_excel(df)
         st.download_button(label='📥 Скачать готовый файл',
                                        data = df_xlsx ,
-                                       file_name= 'Output.xlsx')'''
+                                       file_name= 'Output.xlsx')
+    else:
+        st.write('Неправильный логин или пароль')
+        
         
 
 
