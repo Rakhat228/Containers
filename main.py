@@ -9,7 +9,8 @@ lst = []
 prev_num = 1001581234
 
 #def load_data(sheets_url):
-csv_url = "https://docs.google.com/spreadsheets/d/1I7cU0ZPlL5YatiAI5qMN7ZAe1qEmeRvwWz85go-bVTs/edit#gid=0"
+sheet_url = "https://docs.google.com/spreadsheets/d/1I7cU0ZPlL5YatiAI5qMN7ZAe1qEmeRvwWz85go-bVTs/edit#gid=0"
+csv_url = sheet_url.replace(‘/edit#gid=’, ‘/export?format=csv&gid=’)
 xd = pd.read_csv(csv_url)
 
 #df = load_data(st.secrets["public_gsheets_url"])
