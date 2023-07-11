@@ -4,7 +4,7 @@ import requests
 from io import BytesIO
 st.set_page_config(page_title = 'Контейнеры')
 st.header('Контейнеры')
-st.subheader('Контейнеры')
+#st.subheader('Контейнеры')
 lst = []
 prev_num = 1001581234
 
