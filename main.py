@@ -2,16 +2,16 @@ import pandas as pd
 import streamlit as st
 import requests
 from io import BytesIO
-st.set_page_config(page_title = 'Containers')
-st.header('Cont')
-st.subheader('Cnt')
+st.set_page_config(page_title = 'Контейнеры')
+st.header('Контейнеры')
+st.subheader('Контейнеры')
 lst = []
 prev_num = 1001581234
 
 sheet_url = "https://docs.google.com/spreadsheets/d/1I7cU0ZPlL5YatiAI5qMN7ZAe1qEmeRvwWz85go-bVTs/edit#gid=0"
 csv_url = sheet_url.replace('/edit#gid=', '/export?format=csv&gid=')
 xd = pd.read_csv(csv_url)
-st.write(xd)
+
 
 log_title = st.text_input('Login')
 log_pass = st.text_input('password') 
