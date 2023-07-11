@@ -27,7 +27,7 @@ for i in range(len(xd['Login'])):
         number = st.number_input('number', min_value=0, step=1)
         st.write(number)
         for i in range(1, number+1):
-            lst.append(prev_num + i)
+            lst.append(token+str(prev_num + i))
         df = pd.DataFrame()
         df['Уникальный штрих-код контейнера'] = lst
         st.write(df)
