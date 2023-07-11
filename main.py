@@ -23,7 +23,7 @@ for i in range(len(xd['Login'])):
         token = xd['Token'][i]
         st.write(token)
         st.selectbox('Выбрать контейнер', options)
-        URL = "https://docs.google.com/spreadsheets/d/1I7cU0ZPlL5YatiAI5qMN7ZAe1qEmeRvwWz85go-bVTs/edit#gid="+option
+        #URL = "https://docs.google.com/spreadsheets/d/1I7cU0ZPlL5YatiAI5qMN7ZAe1qEmeRvwWz85go-bVTs/edit#gid="+option
         number = st.number_input('number', min_value=0, step=1)
         st.write(number)
         for i in range(1, number+1):
