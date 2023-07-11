@@ -8,11 +8,11 @@ st.subheader('Cnt')
 lst = []
 prev_num = 1001581234
 
-def load_data(sheets_url):
-    csv_url = sheets_url #.replace("/edit#gid=", "/export?format=csv&gid=")
-    return pd.read_csv(csv_url)
+#def load_data(sheets_url):
+    csv_url = 'https://docs.google.com/spreadsheets/d/1I7cU0ZPlL5YatiAI5qMN7ZAe1qEmeRvwWz85go-bVTs/edit#gid=0'
+    xd = pd.read_csv(csv_url)
 
-df = load_data(st.secrets["public_gsheets_url"])
+#df = load_data(st.secrets["public_gsheets_url"])
 
 login = 'Kalykova'
 password = '12345678'
