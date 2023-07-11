@@ -13,9 +13,6 @@ options = {'Mocha':'mocha', 'Kal':'Kal', 'Soskob':'soskob'}
 
 
 
-# ok let's load the data
-questions_df = load_data(st.secrets["public_gsheets_url"])
-#st.write(questions_df)
 
 if log_title == login and log_pass == password:
     st.selectbox('Выбрать контейнер', options)
