@@ -20,9 +20,9 @@ if log_title == login and log_pass == password:
     st.write(number)
     for i in range(1, number+1):
         lst.append(prev_num + i)
-    st.write(lst)
     df = pd.DataFrame()
     df['Уникальный штрих кодконтейнера'] = lst
+    st.write(df)
 
     def to_excel(df):
        output = BytesIO()
