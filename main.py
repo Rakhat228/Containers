@@ -21,7 +21,7 @@ options = {'Пробирка со средой Кэри Блера':'337454118',
 for i in range(len(xd['Login'])):
     if log_title == xd['Login'][i] and log_pass == xd['Password'][i]:
         token = xd['Token'][i]
-        st.write(token)
+        st.write('Префикс: ',token)
         st.selectbox('Выбрать контейнер', options)
         #URL = "https://docs.google.com/spreadsheets/d/1I7cU0ZPlL5YatiAI5qMN7ZAe1qEmeRvwWz85go-bVTs/edit#gid="+option
         number = st.number_input('number', min_value=0, step=1)
