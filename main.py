@@ -7,6 +7,13 @@ st.header('Cont')
 st.subheader('Cnt')
 lst = []
 prev_num = 1001581234
+
+def load_data(sheets_url):
+    csv_url = sheets_url #.replace("/edit#gid=", "/export?format=csv&gid=")
+    return pd.read_csv(csv_url)
+
+df = load_data(st.secrets["public_gsheets_url"])
+
 login = 'Kalykova'
 password = '12345678'
 log_title = st.text_input('Login')
