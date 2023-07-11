@@ -10,10 +10,7 @@ log_title = st.text_input('Login')
 log_pass = st.text_input('password') 
 options = {'Mocha':'mocha', 'Kal':'Kal', 'Soskob':'soskob'}
 
-@st.cache_data(ttl=600)
-def load_data(sheets_url):
-    csv_url = sheets_url.replace('/edit#gid=', '/export?format=csv&gid=')
-    return pd.read_csv(csv_url)
+
 
 
 # ok let's load the data
