@@ -13,9 +13,9 @@ csv_url = sheet_url.replace('/edit#gid=', '/export?format=csv&gid=')
 xd = pd.read_csv(csv_url)
 
 
-log_title = st.text_input('Login')
-log_pass = st.text_input('password') 
-options = {'Пробирка со средой Кэри Блера':'337454118','Mocha':'mocha', 'Kal':'Kal', 'Soskob':'soskob'}
+log_title = st.text_input('Логин')
+log_pass = st.text_input('Пароль') 
+options = {'Пробирка со средой Кэри Блера':'337454118','Моча':'mocha', 'Кал':'Kal', 'РИФ':'soskob'}
 
 
 for i in range(len(xd['Login'])):
