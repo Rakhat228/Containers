@@ -20,6 +20,7 @@ options = {'Mocha':'mocha', 'Kal':'Kal', 'Soskob':'soskob'}
 
 for i in range(len(xd['Login'])):
     if log_title == xd['Login'][i] and log_pass == xd['Password'][i]:
+        token = xd['Token'][i]
         st.write(token)
         st.selectbox('Выбрать контейнер', options)
         number = st.number_input('number', min_value=0, step=1)
