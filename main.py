@@ -8,12 +8,9 @@ st.header('Распечатка контейнеров/пробирок')
 lst = []
 prev_num = 1001581234
 
-def load_data(sheets_url):
-    csv_url = sheets_url.replace("/edit#gid=", "/export?format=csv&gid=")
-    return pd.read_csv(csv_url)
-
-df = load_data(st.secrets["public_gsheets_url"])
-
+sheets_url = "https://docs.google.com/spreadsheets/d/1I7cU0ZPlL5YatiAI5qMN7ZAe1qEmeRvwWz85go-bVTs/edit#gid=0"
+csv_url = sheets_url.replace("/edit#gid=", "/export?format=csv&gid=")
+df = pd.read_csv(csv_url)
 
 log_title = st.text_input('Логин')
 log_pass = st.text_input('Пароль') 
