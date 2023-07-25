@@ -10,7 +10,7 @@ prev_num = 1001581234
 
 sheets_url = "https://docs.google.com/spreadsheets/d/1I7cU0ZPlL5YatiAI5qMN7ZAe1qEmeRvwWz85go-bVTs/edit#gid=0"
 csv_url = sheets_url.replace("/edit#gid=", "/export?format=csv&gid=")
-df = pd.read_csv(csv_url)
+xd = pd.read_csv(csv_url)
 
 log_title = st.text_input('Логин')
 log_pass = st.text_input('Пароль') 
