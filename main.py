@@ -51,7 +51,7 @@ for i in range(len(xd['Login'])):
                                        file_name= 'Output.xlsx')          
     else:
        st.write('Неправильный логин или пароль')
-       break
+       continue
         
         
 
