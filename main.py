@@ -49,9 +49,9 @@ for i in range(len(xd['Login'])):
         st.download_button(label='📥 Скачать готовый файл',
                                        data = df_xlsx ,
                                        file_name= 'Output.xlsx')
-    else:
-       st.write('Неправильный логин или пароль')
-       break
+   # else:
+     #  st.write('Неправильный логин или пароль')
+       #break
         
         
 
