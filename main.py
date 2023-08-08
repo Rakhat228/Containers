@@ -29,11 +29,11 @@ for i in range(len(xd['Login'])):
         token = xd['Token'][i]
         st.write('Префикс: ',token)
         option = st.selectbox('Выбрать контейнер', options)
-        st.write(option.key,':',option.value)
+        st.write(option.value)
         number = st.number_input('Введите количество пробирок', min_value=0, step=1)
         st.write(number)
         for i in range(1, number+1):
-            lst.append(options.value+str(prev_num + i))
+            lst.append(option.value+str(prev_num + i))
         df = pd.DataFrame()
         df['Уникальный штрих-код контейнера'] = lst
         st.write(df)
